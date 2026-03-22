@@ -1,0 +1,41 @@
+@use '../../../styles/global.scss' as *;
+
+.footer {
+  background-color: #0d0d0d; // Even darker than bg-color for footer
+  color: $text-color;
+  padding: 50px 0;
+  text-align: center;
+  border-top: 1px solid $border-color;
+
+  .socialIcons {
+    margin-bottom: 1.5rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      color: $text-color;
+      margin: 0 10px;
+      transition: all 0.3s;
+      font-size: 1.2rem;
+      border: 1px solid rgba(255,255,255,0.1);
+
+      &:hover {
+        background: $secondary-color;
+        border-color: $secondary-color;
+        transform: translateY(-3px);
+        color: #fff;
+      }
+    }
+  }
+
+  .copyright {
+    color: $muted-text;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+}

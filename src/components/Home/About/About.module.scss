@@ -1,0 +1,248 @@
+@use '../../../styles/global.scss' as *;
+
+.aboutSection {
+//   background-color: $bg-color;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 0;
+    min-height: 100vh;
+  }
+
+  .imageWrapper {
+    position: relative;
+    // background-color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+  }
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 0;
+
+    .profileImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(20%) contrast(1.1);
+      transition: transform 0.6s ease, filter 0.6s ease;
+    }
+
+    &:hover .profileImage {
+      transform: scale(1.05);
+      filter: grayscale(0%) contrast(1.2);
+    }
+
+    .imageOverlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+      z-index: 2;
+
+      .overlayText {
+        h3 {
+          font-family: $font-family-heading;
+          font-size: 0.85rem;
+          font-weight: 700;
+          letter-spacing: 2px;
+          color: #fff;
+          margin: 0 0 0.3rem 0;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-family: $font-family-sans-serif;
+          font-size: 0.75rem;
+          letter-spacing: 1.5px;
+          color: $muted-text;
+          margin: 0;
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 5rem;
+    background-color: $bg-color;
+  }
+
+  .content {
+    max-width: 600px;
+
+    .mainHeading {
+      font-family: $font-family-sans-serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: #fff;
+      margin: 0 0 3rem 0;
+      letter-spacing: -0.5px;
+      text-transform: none;
+
+      // Add subtle animation on scroll
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .ctaButton {
+      font-family: $font-family-sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: transparent;
+      border: 1.5px solid #fff;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #fff;
+        transition: width 0.4s ease;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: $bg-color;
+        border-color: #fff;
+
+        &::before {
+          width: 100%;
+        }
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+  .aboutSection {
+    .container {
+      grid-template-columns: 1fr 1.2fr;
+    }
+
+    .contentWrapper {
+      padding: 3rem 3rem;
+    }
+
+    .content {
+      .mainHeading {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .aboutSection {
+    min-height: auto;
+
+    .container {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .imageWrapper {
+      padding: 3rem 2rem;
+      min-height: 70vh;
+    }
+
+    .imageContainer {
+      max-width: 350px;
+    }
+
+    .contentWrapper {
+      padding: 4rem 2rem;
+    }
+
+    .content {
+      .mainHeading {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+
+      .ctaButton {
+        padding: 0.9rem 2rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutSection {
+    .imageWrapper {
+      padding: 2rem 1.5rem;
+      min-height: 60vh;
+    }
+
+    .imageContainer {
+      max-width: 430px;
+    }
+
+    .contentWrapper {
+      padding: 3rem 1.5rem;
+    }
+
+    .content {
+      .mainHeading {
+        font-size: 1.5rem;
+        line-height: 1.4;
+      }
+
+      .ctaButton {
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}

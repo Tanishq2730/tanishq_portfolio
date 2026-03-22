@@ -1,0 +1,53 @@
+@use '../../../styles/global.scss' as *;
+
+.servicesSection {
+  padding: 100px 0;
+  background-color: $bg-color;
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: $text-color;
+    
+    span {
+      color: $secondary-color;
+    }
+  }
+
+  .serviceCard {
+    padding: 2rem;
+    border: 1px solid $border-color;
+    background: $card-bg;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      border-color: $secondary-color;
+    }
+
+    .iconWrapper {
+      font-size: 3rem;
+      color: $secondary-color;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: $text-color;
+    }
+
+    p {
+      color: $muted-text;
+      margin-bottom: 0;
+    }
+  }
+}

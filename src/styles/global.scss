@@ -1,0 +1,72 @@
+// Global Variables
+$primary-color: #3498db; // Brighter blue for dark mode contrast
+$secondary-color: #e74c3c;
+$text-color: #e0e0e0;
+$bg-color: #121212;
+$card-bg: #1e1e1e;
+$muted-text: #adb5bd;
+$border-color: #2d2d2d;
+$font-family-sans-serif: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-heading: 'Big Shoulders Display', sans-serif;
+
+body {
+  font-family: $font-family-sans-serif;
+  color: $text-color;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  text-transform: uppercase; // Big Shoulders Display looks best uppercase
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+  
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Utility classes
+.section-padding {
+  padding: 80px 0;
+}
+
+.text-primary-custom {
+  color: $primary-color !important;
+}
+
+.text-secondary-custom {
+  color: $secondary-color !important;
+}
+
+// Scrollbar styling for dark mode
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+  
+  &:hover {
+    background: #555;
+  }
+}
