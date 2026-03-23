@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "slug": "excelpte",
+    "title": "ExcelPTE",
+    "category": "About Work",
+    "image": "/assets/images/project/1.png",
+    "description": "ExcelPTE is an advanced PTE exam preparation platform designed to help users practice and improve their English proficiency for international exams. The platform simulates real exam scenarios with AI-based scoring, allowing users to track their performance and identify areas for improvement.It provides a seamless and user-friendly interface where learners can take mock tests, analyze results, and build confidence before appearing for the actual PTE exam.",
+    "tech": ["React", "Node.js", "Express", "MongoDB", "GSAP"],
+    "link": "https://www.excelpte.com",
+    "longImage": "/assets/images/project/m1.png"
+  },
+  {
+    "id": 2,
+    "slug": "nuvosid",
+    "title": "Nuvosid",
+    "category": "About Work",
+    "image": "/assets/images/project/2.png",
+    "description": "Nuvosid is a modern lifestyle management platform that helps users organize their daily tasks and improve productivity through smart features.",
+    "tech": ["Next Js", "Bootstrap", "SCSS", "Firebase"],
+    "link": "https://www.nuvosid.com",
+    "longImage": "/assets/images/project/m2.png"
+  },
+  {
+    "id": 6,
+    "slug": "watermate",
+    "title": "Watermate",
+    "category": "About Work",
+    "image": "/assets/images/project/6.png",
+    "description": "Watermate is a modern digital platform focused on delivering seamless and efficient networking experiences. It leverages advanced insights, automation, and performance-driven solutions to ensure reliability and smooth connectivity from client to cloud.The platform is designed to enhance both operator and end-user experiences by providing intelligent systems that simplify network management and improve overall performance.",
+    "tech": ["HTML5", "CSS3","Bootstrap", "JavaScript", "AOS"],
+    "link": "https://www.watermate.co.in",
+    "longImage": "/assets/images/project/m3.png"
+  },
+  {
+    "id": 4,
+    "slug": "chandan-kasturi",
+    "title": "Chandan Kasturi",
+    "category": "About Work",
+    "image": "/assets/images/project/4.png",
+    "description": "Chandan Kasturi is a luxury resort website developed to showcase a serene and premium hospitality experience in Dhariyawad, Rajasthan. The platform highlights a perfect blend of comfort, nature, and modern amenities, offering users a seamless way to explore the resort and its offerings.The resort features 20 well-designed rooms, including deluxe and super deluxe categories, equipped with modern facilities to ensure a comfortable stay. Key attractions such as a swimming pool, landscaped gardens, rooftop and garden dining, and a spacious banquet hall for events are elegantly presented to enhance user engagement.",
+    "tech": ["HTML5", "CSS3","Bootstrap", "JavaScript", "AOS"],
+    "link": "https://chandankasturiresort.com/",
+    "longImage": "/assets/images/project/m4.png"
+  },
+  {
+    "id": 5,
+    "slug": "underworld-gangwars",
+    "title": "Underworld Gangwars",
+    "category": "About Work",
+    "image": "/assets/images/project/5.png",
+    "description": "Underworld Gang Wars is a high-intensity battle royale gaming platform inspired by competitive multiplayer experiences. The website is designed to deliver an immersive and action-driven interface, reflecting the thrill, strategy, and fast-paced nature of the game.It showcases game features, characters, maps, and updates through a visually engaging and dynamic layout. The platform focuses on creating a seamless user experience with bold visuals, smooth navigation, and responsive design to keep users engaged and connected with the gaming ecosystem.",
+    "tech": ["HTML5", "CSS3","Bootstrap", "JavaScript", "AOS"],
+    "link": "https://underworldgangwars.com",
+    "longImage": "/assets/images/project/m5.png"
+  },
+  {
+    "id": 3,
+    "slug": "nifd-udaipur",
+    "title": "NIFD Udaipur",
+    "category": "About Work",
+    "image": "/assets/images/project/3.png",
+    "description": "NIFD Udaipur's official portal showcasing student portfolios, fashion shows, and academic programs in design and creative arts.",
+    "tech": ["HTML5", "CSS3","Wordpress"],
+    "link": "https://nifdudaipur.com",
+    "longImage": "/assets/images/project/3.png"
+  }
+]

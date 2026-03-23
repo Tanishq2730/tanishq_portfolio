@@ -3,66 +3,19 @@ import styles from './Portfolio.module.scss';
 import { FaArrowRight } from 'react-icons/fa';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import img1 from '../../../assets/images/project/1.png';
-import img2 from '../../../assets/images/project/2.png';
-import img3 from '../../../assets/images/project/3.png';
-import img4 from '../../../assets/images/project/4.png';
-import img5 from '../../../assets/images/project/5.png';
-import img6 from '../../../assets/images/project/6.png';
+import projectsData from '../../../data/projects.json';
+import { useNavigate, Link } from 'react-router-dom';
+import { getProjectImage } from '../../../utils/imageHelper';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
-
-const projectsData = [
-  {
-    id: 1,
-    title: 'ExcelPTE',
-    category: 'Lifestyle',
-    image: img1,
-    link: '#'
-  },
-  {
-    id: 2,
-    title: 'Nuvosid',
-    category: 'Lifestyle',
-    image: img2,
-    link: '#'
-  },
-  {
-    id: 6,
-    title: 'Watermate',
-    category: 'Wellness',
-    image: img6,
-    link: '#'
-  },
-  {
-    id: 4,
-    title: 'Chandan Kasturi',
-    category: 'Artistic',
-    image: img4,
-    link: '#'
-  },
-  {
-    id: 5,
-    title: 'Underworld Gangwars',
-    category: 'Wellness',
-    image: img5,
-    link: '#'
-  },
-  {
-    id: 3,
-    title: 'NIFD Udaipur',
-    category: 'Artistic',
-    image: img3,
-    link: '#'
-  },
-];
 
 const Portfolio = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const linkRef = useRef(null);
   const cardsRef = useRef([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Clear refs array
@@ -143,24 +96,23 @@ const Portfolio = () => {
     };
   }, []);
 
-  const handleCardClick = (e, link) => {
+  const handleCardClick = (e, slug) => {
     e.preventDefault();
-    // Navigate to project detail or open modal
-    console.log('Navigating to:', link);
-    // You can add navigation logic here
-    // window.location.href = link;
+    // Navigate to project detail
+    navigate(`/work/${slug}`);
   };
 
   return (
     <section className={styles.portfolioSection} id="portfolio" ref={sectionRef}>
       <div className={styles.container}>
         {/* Section Header */}
+
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle} ref={titleRef}>Projects</h2>
-          <a href="/projects" className={styles.viewAllLink} ref={linkRef}>
+          <Link to="/projects" className={styles.viewAllLink} ref={linkRef}>
             All Projects
             <FaArrowRight className={styles.arrowIcon} />
-          </a>
+          </Link>
         </div>
 
         {/* Projects Grid with Bootstrap */}
@@ -173,11 +125,11 @@ const Portfolio = () => {
                 <div
                   ref={(el) => (cardsRef.current[index] = el)}
                   className={styles.projectCard}
-                  onClick={(e) => handleCardClick(e, project.link)}
+                  onClick={(e) => handleCardClick(e, project.slug)}
                 >
                   <div className={styles.imageWrapper}>
                     <img
-                      src={project.image}
+                      src={getProjectImage(project.image)}
                       alt={project.title}
                       className={styles.projectImage}
                     />
