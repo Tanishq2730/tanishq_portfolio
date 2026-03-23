@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './About.module.scss';
 import aboutMeImg from '../../../assets/images/me.jpg';
 
@@ -30,9 +30,9 @@ const About = () => {
                             <h2 className={styles.mainHeading}>
                                 I’m a UI Developer dedicated to creating user-centric web applications. With a strong eye for design and performance, I build interfaces that are fast, responsive, and easy to use — ensuring every interaction feels smooth and meaningful.
                             </h2>
-                            <button className={styles.ctaButton}>
+                            <Link to="/about" className={styles.ctaButton}>
                                 MORE ABOUT ME
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

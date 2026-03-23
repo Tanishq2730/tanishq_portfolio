@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './WorkTogether.module.scss';
 
 const WorkTogether = () => {
@@ -19,13 +19,13 @@ const WorkTogether = () => {
 
           <div className="col-lg-5 col-md-12 mt-5 mt-lg-0">
             <div className={styles.rightPart}>
-              <div className={styles.circleWrapper}>
+              <Link to="/contact" className={styles.circleWrapper}>
                 <div className={styles.circle}></div>
                 <div className={styles.circleInner}>
                   <span>LET'S</span>
                   <span>CONNECT!</span>
                 </div>
-              </div>
+              </Link>
               <div className={styles.description}>
                 <p>FEELING GOOD ABOUT A NEW PROJECT? WRITE ME WHAT'S IN YOUR MIND AND LET'S TALK ABOUT IT!</p>
               </div>
