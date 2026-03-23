@@ -16,7 +16,7 @@
     "title": "Nuvosid",
     "category": "About Work",
     "image": "/assets/images/project/2.png",
-    "description": "Nuvosid is a modern lifestyle management platform that helps users organize their daily tasks and improve productivity through smart features.",
+    "description": "Nuvosid is built on the strong foundation of AVS Engineers Group, a company with over two decades of expertise in architecture and engineering. The platform focuses on delivering sustainable and high-performance solutions through advanced design, construction excellence, and end-to-end project execution.It also extends its capabilities into turnkey construction, professional project management, and specialized education and skill development through Surpass Academy, creating a complete ecosystem for growth and innovation.",
     "tech": ["Next Js", "Bootstrap", "SCSS", "Firebase"],
     "link": "https://www.nuvosid.com",
     "longImage": "/assets/images/project/m2.png"
@@ -62,7 +62,7 @@
     "image": "/assets/images/project/3.png",
     "description": "NIF Udaipur is a fashion and design institute website crafted to showcase creativity, innovation, and professional education in the field of design. The platform highlights various courses, student work, and career opportunities, creating an inspiring digital experience for aspiring designers.The website is designed with a modern and visually engaging interface, focusing on clean layouts, intuitive navigation, and strong visual storytelling to reflect the essence of the fashion industry.",
     "tech": ["HTML5", "CSS3","Wordpress"],
-    "link": "https://nifdudaipur.com",
+    "link": "https://nifudaipur.com/",
     "longImage": "/assets/images/project/m6.png"
   }
 ]
