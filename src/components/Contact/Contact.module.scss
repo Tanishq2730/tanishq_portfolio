@@ -2,102 +2,237 @@
 @use '../../styles/global.scss' as *;
 
 .contactSection {
-  padding: 100px 0;
-  background-color: $bg-color;
+  padding: 100px 0 150px;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
 
-  .sectionTitle {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .header {
     text-align: center;
-    color: $text-color;
-    
-    span {
-      color: $secondary-color;
+    max-width: 700px;
+    margin: 0 auto 70px;
+
+    .subtitle {
+      color: #ff3e3e;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      display: inline-block;
+      font-size: 14px;
+      background: rgba(255, 62, 62, 0.1);
+      padding: 8px 16px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 62, 62, 0.2);
+    }
+
+    .title {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 25px;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #fff 30%, #888 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (max-width: 768px) {
+        font-size: 2.8rem;
+      }
+    }
+
+    .description {
+      color: #a0a0a0;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
   }
 
-  .contactInfo {
-    margin-bottom: 2rem;
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
 
-    .infoItem {
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .detailCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 62, 62, 0.3);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+
+      .iconCircle {
+        background: #ff3e3e;
+        color: #fff;
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(255, 62, 62, 0.3);
+      }
+    }
+
+    .iconCircle {
+      width: 70px;
+      height: 70px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      margin-bottom: 1.5rem;
+      justify-content: center;
+      font-size: 28px;
+      color: #ff3e3e;
+      margin-bottom: 25px;
+      transition: all 0.4s ease;
+    }
 
-      .icon {
-        width: 50px;
-        height: 50px;
-        background: $card-bg;
-        border: 1px solid $border-color;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $secondary-color;
-        font-size: 1.25rem;
-        margin-right: 1rem;
-      }
-
-      h5 {
-        margin-bottom: 0.25rem;
-        font-weight: 600;
-        color: $text-color;
+    .cardContent {
+      h3 {
+        font-size: 1.3rem;
+        color: #fff;
+        margin-bottom: 12px;
+        font-weight: 700;
       }
 
       p {
-        margin-bottom: 0;
-        color: $muted-text;
+        color: #b0b0b0;
+        font-size: 1rem;
+        margin-bottom: 25px;
+        line-height: 1.6;
+      }
+
+      .actionBtn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        transition: gap 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          gap: 12px;
+          color: #ff3e3e;
+        }
       }
     }
   }
 
-  .contactForm {
-    background: $card-bg;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid $border-color;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  .whatsappBanner {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(18, 140, 126, 0.05));
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    border-radius: 20px;
+    padding: 45px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
 
-    .formControl {
-      border: 1px solid $border-color;
-      background-color: $bg-color;
-      color: $text-color;
-      padding: 0.75rem 1rem;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-      width: 100%;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 30px;
+    }
 
-      &:focus {
-        border-color: $secondary-color;
-        box-shadow: none;
-        outline: none;
+    &:hover {
+      box-shadow: 0 20px 40px rgba(37, 211, 102, 0.15);
+      transform: translateY(-5px);
+    }
+
+    .whatsappContent {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 20px;
       }
-      
-      &::placeholder {
-        color: $muted-text;
-        opacity: 0.7;
+
+      .waIcon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #25D366, #128C7E);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: #fff;
+        box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        flex-shrink: 0;
+      }
+
+      .waText {
+        h2 {
+          font-size: 2rem;
+          color: #fff;
+          margin-bottom: 10px;
+          font-weight: 800;
+
+          @media (max-width: 600px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        p {
+          color: #b0b0b0;
+          font-size: 1.1rem;
+        }
       }
     }
 
-    textarea.formControl {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    button {
-      background: $secondary-color;
-      border: none;
-      padding: 10px 30px;
+    .waButton {
+      background: linear-gradient(135deg, #25D366, #128C7E);
       color: #fff;
-      font-weight: 600;
-      border-radius: 30px;
-      transition: all 0.3s;
-      cursor: pointer;
+      padding: 18px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+      flex-shrink: 0;
 
       &:hover {
-        background: color.scale($secondary-color, $lightness: -10%);
-        transform: translateY(-2px);
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+      }
+
+      .btnIcon {
+        font-size: 1.3rem;
       }
     }
   }

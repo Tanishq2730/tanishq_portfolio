@@ -5,7 +5,7 @@ import ContactComponent from '../components/Contact/Contact';
 const Contact = () => {
   return (
     <div className="page-padding">
-      <PageHeader title="Get In Touch" />
+      {/* <PageHeader title="Get In Touch" /> */}
       <ContactComponent />
     </div>
   );

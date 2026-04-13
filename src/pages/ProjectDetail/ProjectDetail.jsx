@@ -9,7 +9,7 @@ import {
   SiReact, SiNodedotjs, SiExpress, SiMongodb, SiBootstrap, 
   SiSass, SiFirebase, SiRedux, SiHtml5, SiCss3, 
   SiJavascript, SiNextdotjs, SiTailwindcss, SiPostgresql,
-  SiMaterialdesign, SiFramer, SiMysql, SiExpo, SiWordpress
+  SiMaterialdesign, SiFramer, SiMysql, SiExpo, SiWordpress, SiGreensock
 } from 'react-icons/si';
 import { getProjectImage } from '../../utils/imageHelper';
 
@@ -35,7 +35,7 @@ const techIcons = {
   'Framer Motion': <SiFramer style={{color: '#0055FF'}}/>,
   'PostgreSQL': <SiPostgresql style={{color: '#4169E1'}}/>,
   'Material UI': <SiMaterialdesign style={{color: '#0081CB'}}/>,
-  'GSAP': <SiJavascript style={{color: '#F7DF1E'}}/>,
+  'GSAP': <SiGreensock style={{color: '#88CE02'}}/>,
   'MySQL': <SiMysql style={{color: '#4479A1'}}/>,
   'Wordpress': <SiWordpress style={{color: '#21759B'}}/>,
 };

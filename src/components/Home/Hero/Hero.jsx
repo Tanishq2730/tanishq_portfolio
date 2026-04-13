@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.scss';
-import { FaFacebookF, FaDribbble, FaBehance, FaYoutube, FaArrowDown } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -17,10 +17,9 @@ const Hero = () => {
       </div>
 
       <div className={styles.socialIcons}>
-        <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-        <a href="#" aria-label="Dribbble"><FaDribbble /></a>
-        <a href="#" aria-label="Behance"><FaBehance /></a>
-        <a href="#" aria-label="Youtube"><FaYoutube /></a>
+        <a href="https://www.linkedin.com/in/tanishq-shrivastava-322188186" aria-label="LinkedIn"><FaLinkedinIn /></a>
+        <a href="https://www.instagram.com/tanishq._.s7/" aria-label="Instagram"><FaInstagram /></a>
+        <a href="https://www.facebook.com/share/1DkaAvfD5f/?mibextid=LQQJ4d" aria-label="Facebook"><FaFacebookF /></a>
       </div>
 
       <div className={styles.scrollIndicator}>
